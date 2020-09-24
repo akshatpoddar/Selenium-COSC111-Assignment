@@ -8,7 +8,7 @@ chrome_options.add_argument("--headless")
 
 FILE_PATH = sys.argv[2]
 PATH = os.getcwd()+"/chromedriver"
-driver = webdriver.Chrome(PATH)
+driver = webdriver.Chrome(executable_path=PATH, chrome_options=chrome_options)
 ASS_NUMBER = sys.argv[1]
 SLUG = 642720 + (2*int(ASS_NUMBER))
 URL = "https://canvas.ubc.ca/courses/63432/assignments/"+str(SLUG)
